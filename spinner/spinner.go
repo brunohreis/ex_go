@@ -2,10 +2,15 @@ package main
 
 import (
 	"fmt"
+	"image/gif"
+	"math/rand/v2"
 	"time"
 )
 
 func main() {
+	anim := gif.GIF{LoopCount: nframes}
+	freq := rand.Float64() * 3.0
+	t := 0.0
 	go spinner(100 * time.Millisecond)
 	const n = 45
 	fibN := fib(n) // slow
